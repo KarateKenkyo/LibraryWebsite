@@ -15,23 +15,19 @@ $gridGap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax($minColWidth, 1fr));
 
   .Card {
+    border: 1px solid black;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax($minColWidth, 1fr));
 
     height: 250px;
     width: auto;
-
-    color: #0178d4;
-    font-size: 3rem;
-    text-align: center;
     overflow: hidden;
 
     .CardText {
-      margin: 10px;
-      border-radius: 20px;
+      background-color: white;
+      color: black;
+      border-bottom-right-radius: 20px;
       padding: 5px 15px 5px 15px;
-      background-color: rgba(17, 17, 17, 0.47);
-      color: white;
       position: absolute;
       z-index: 1;
     }
