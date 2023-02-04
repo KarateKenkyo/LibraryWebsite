@@ -7,10 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-$minColWidth: 15rem;
+$minColWidth: 20rem;
 $gridGap: 2rem;
 
-.App {
+.App {;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($minColWidth, 1fr));
 
@@ -24,7 +24,7 @@ $gridGap: 2rem;
     overflow: hidden;
 
     .CardText {
-      background-color: white;
+      background-color: rgba(255, 255, 255, 0.78);
       color: black;
       border-bottom-right-radius: 20px;
       padding: 5px 15px 5px 15px;
@@ -33,9 +33,11 @@ $gridGap: 2rem;
     }
 
     .CardImage {
-      filter: grayscale(100%);
-      -webkit-filter: grayscale(100%);
-      transition: all 0.5s ease;
+      height: 250px;
+      width: auto;
+      filter: grayscale(80%);
+      -webkit-filter: grayscale(80%);
+      transition: all 500ms ease;
     }
 
     .CardImage:hover {
