@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.scss';
-import {MantineProvider, Modal, Text} from "@mantine/core";
+import {Center, Divider, MantineProvider, Modal, Space, Text, Title} from "@mantine/core";
+import Copyright from './Copyright';
 
 function Card(props: any) {
     const [opened, setOpened] = useState(false);
@@ -17,12 +18,10 @@ function Card(props: any) {
                 onClose={() => setOpened(false)}
             >
                 <iframe
-                    width="640"
-                    height="390"
                     src="https://www.youtube.com/embed/p0a7eRxq_Lg"
-                    title="Kihon Ido 1"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen />
+                    allowFullScreen
+                />
             </Modal>
 
             <div
@@ -32,13 +31,18 @@ function Card(props: any) {
                 <div className={"CardText"}>
                     <Text fz="xl">{props.title}</Text>
                 </div>
-                <img
-                    alt={""}
-                    className={"CardImage"}
-                    src={"https://img.youtube.com/vi/" + props.video_id + "/maxresdefault.jpg"}
-                />
             </div>
         </div>
+    );
+}
+
+function Seperator() {
+    return (
+        <>
+            <Space h="xl" />
+            <Divider />
+            <Space h="xl" />
+        </>
     );
 }
 
@@ -235,12 +239,25 @@ export default function App() {
             withGlobalStyles
             withNormalizeCSS
         >
+            <Seperator />
+            <Center>
+                <Title order={1}>
+                    Karateverein Kenkyo Rheinzabern e.V.
+                </Title>
+            </Center>
+            <Seperator />
             <div className="App" id="App">
                 {kataRows}
+            </div>
+            <Seperator />
+            <div className="App" id="App">
                 {bunkaiRows}
+            </div>
+            <Seperator />
+            <div className="App" id="App">
                 {kumiteRows}
             </div>
-            {/*<Copyright />*/}
+            <Copyright />
         </MantineProvider>
     );
 }

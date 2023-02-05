@@ -10,41 +10,41 @@ body {
 $minColWidth: 20rem;
 $gridGap: 2rem;
 
+iframe {
+  display: block;
+  background: #000;
+  border: none;
+  height: 80vh;
+  width: 80vw;
+}
+
 .App {;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($minColWidth, 1fr));
 
   .Card {
-    border: 1px solid black;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax($minColWidth, 1fr));
 
-    height: 250px;
+    border: 2px solid white;
     width: auto;
-    overflow: hidden;
+
+    .CardText:hover {
+      cursor: pointer;
+    }
 
     .CardText {
+      border: 2px solid black;
       background-color: rgba(255, 255, 255, 0.78);
       color: black;
-      border-bottom-right-radius: 20px;
+      margin: 10px;
+      border-radius: 5px;
       padding: 5px 15px 5px 15px;
-      position: absolute;
-      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-content: center;
     }
 
-    .CardImage {
-      height: 250px;
-      width: auto;
-      filter: grayscale(80%);
-      -webkit-filter: grayscale(80%);
-      transition: all 500ms ease;
-    }
-
-    .CardImage:hover {
-      cursor: pointer;
-      filter: grayscale(0%);
-      -webkit-filter: grayscale(0%);
-    }
   }
 }
 
