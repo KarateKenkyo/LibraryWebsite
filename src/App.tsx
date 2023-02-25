@@ -18,6 +18,7 @@ function Card(props: any) {
                 onClose={() => setOpened(false)}
             >
                 <iframe
+                    title={props.title}
                     src="https://www.youtube.com/embed/p0a7eRxq_Lg"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
