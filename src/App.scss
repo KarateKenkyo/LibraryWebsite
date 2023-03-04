@@ -10,12 +10,9 @@ body {
 $minColWidth: 20rem;
 $gridGap: 2rem;
 
-iframe {
-  display: block;
-  background: #000;
-  border: none;
-  height: 80vh;
-  width: 80vw;
+.videoContainer {
+  width: 70vw;
+  margin: auto;
 }
 
 .App {;
